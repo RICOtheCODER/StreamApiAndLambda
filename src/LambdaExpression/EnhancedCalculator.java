@@ -10,13 +10,17 @@ public class EnhancedCalculator {
      }
 
      public static void main(String[] args) {
-         var sum = calculate(44,74,(a,b) -> a+b);
-         var substract = calculate(78,65,(a,b) -> a-b);
-         var multiply = calculate(245,78,(a,b) -> a*b);
+         var sum = calculate(44,74,(n,m) -> m+n);
+         var substract = calculate(78,65,(n,m) -> n-m);
+         var multiply = calculate(245,78,(n,m) -> n*m);
+         var findGreatestNumber =calculate(47,87,(n,m)->Math.max(n,m));
+         var findLeastNumber=calculate(47,87,(n,m)->Math.min(m,n));
          //lambda expression to take multiple values and return them from a functional interface
          System.out.println("Sum : "+sum);
          System.out.println("Substraction :  "+substract);
-         System.out.println("Multiplication: "+multiply);
+         System.out.println("Multiplication : "+multiply);
+         System.out.println("Greatest Number : "+findGreatestNumber);
+         System.out.println("LeastNumber : "+findLeastNumber);
 
      }
 }
